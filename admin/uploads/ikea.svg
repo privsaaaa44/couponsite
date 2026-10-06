@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50" width="160" height="50">
+  <rect x="0" y="4" width="160" height="42" rx="4" fill="#0058A3" />
+  <ellipse cx="80" cy="25" rx="72" ry="18" fill="#FFDA1A" />
+  <text x="80" y="33" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Impact', 'Arial Black', sans-serif" font-size="26" font-weight="900" fill="#0058A3" letter-spacing="4">IKEA</text>
+</svg>

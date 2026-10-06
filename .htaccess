@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteBase /couponsitesproject/
+
+# Prevent directory listing
+Options -Indexes
+
+# 1. Store / Brand Clean URL (/store/nike -> store.php?slug=nike)
+RewriteRule ^store/([a-zA-Z0-9_-]+)/?$ store.php?slug=$1 [L,QSA]
+
+# 2. Category Clean URL (/category/fashion-apparel -> category.php?slug=fashion-apparel)
+RewriteRule ^category/([a-zA-Z0-9_-]+)/?$ category.php?slug=$1 [L,QSA]
+
+# 3. Dynamic Sitemap
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# 4. Clean URLs for static pages and search
+RewriteRule ^search/?$ search.php [L,QSA]
+RewriteRule ^about/?$ about.php [L,QSA]
+RewriteRule ^contact/?$ contact.php [L,QSA]
+RewriteRule ^privacy/?$ privacy.php [L,QSA]
+RewriteRule ^categories/?$ categories.php [L,QSA]
+
+# Allow direct access to real files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
